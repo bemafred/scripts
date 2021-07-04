@@ -262,7 +262,7 @@ CC="$CC" CXX="$CXX" CFLAGS="$OPT_FLAGS" \
     --enable-__cxa_atexit \
     --disable-libunwind-exceptions \
     --enable-linker-build-id \
-    --enable-languages=c,c++,d,fortran,go,objc,obj-c++,lto \
+    --enable-languages=c,c++,d,fortran,go,objc,obj-c++,ada,lto \
     --disable-vtable-verify \
     --with-default-libstdcxx-abi=new \
     --enable-libstdcxx-debug  \
