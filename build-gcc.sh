@@ -23,7 +23,7 @@ gcc_version=11.1.0
 arch_flags="-march=x86-64"
 
 # Target linux/gnu
-build_target=x86_64-${ID}-${VERSION_ID}-linux-gnu
+build_target=x86_64-${ID}-linux-gnu
 
 # File locations.  Use 'install_dir' to specify where gcc will be installed.
 # The other directories are used only during the build process, and can later be
@@ -262,7 +262,7 @@ CC="$CC" CXX="$CXX" CFLAGS="$OPT_FLAGS" \
     --enable-__cxa_atexit \
     --disable-libunwind-exceptions \
     --enable-linker-build-id \
-    --enable-languages=c,c++,d,fortran,go,java,lto \
+    --enable-languages=c,c++,d,fortran,go,objc,obj-c++,lto \
     --disable-vtable-verify \
     --with-default-libstdcxx-abi=new \
     --enable-libstdcxx-debug  \
