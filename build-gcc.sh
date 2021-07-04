@@ -5,12 +5,13 @@
 # This gcc build script is free software; you can redistribute it and/or modify
 # it under the terms of the MIT license.
 
+source /etc/os-release
 
 #======================================================================
 # User configuration
 #======================================================================
 
-# Provide the version of gcc being built (e.g. 9.1.0)
+# Provide the version of gcc being built (e.g. 11.1.0)
 gcc_version=11.1.0
 
 # Additional makefile options.  E.g., "-j 4" for parallel builds.  Parallel
@@ -22,7 +23,7 @@ gcc_version=11.1.0
 arch_flags="-march=x86-64"
 
 # Target linux/gnu
-build_target=x86_64-ubuntu-linux-gnu
+build_target=x86_64-${ID}-${VERSION_ID}-linux-gnu
 
 # File locations.  Use 'install_dir' to specify where gcc will be installed.
 # The other directories are used only during the build process, and can later be
@@ -261,7 +262,7 @@ CC="$CC" CXX="$CXX" CFLAGS="$OPT_FLAGS" \
     --enable-__cxa_atexit \
     --disable-libunwind-exceptions \
     --enable-linker-build-id \
-    --enable-languages=c,c++,d,lto,fortran,go,java,objc,obj-c++ \
+    --enable-languages=c,c++,lto \
     --disable-vtable-verify \
     --with-default-libstdcxx-abi=new \
     --enable-libstdcxx-debug  \
