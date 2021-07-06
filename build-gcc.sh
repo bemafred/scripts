@@ -5,8 +5,6 @@
 # This gcc build script is free software; you can redistribute it and/or modify
 # it under the terms of the MIT license.
 
-. /etc/os-release
-
 #======================================================================
 # User configuration
 #======================================================================
@@ -23,7 +21,7 @@ gcc_version=11.1.0
 arch_flags="-march=x86-64"
 
 # Target linux/gnu
-build_target=x86_64-$ID-linux-gnu
+build_target=x86_64-pc-linux-gnu
 
 # File locations.  Use 'install_dir' to specify where gcc will be installed.
 # The other directories are used only during the build process, and can later be
