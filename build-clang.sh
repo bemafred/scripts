@@ -23,6 +23,15 @@ set -e
 
 
 cd ~/src/repos/llvm-project/
+
+llvm_branch=$(git branch --show-current)
+
+if [ "${llvm_branch}" != "release/${llvm_version}" ]; then
+ echo The current branch, ${llvm_branch}, is not the expected branch release/${llvm_version}
+ echo Aborting.
+ exit 1
+fi
+
 if [ -d "build"]; then
      rm -fr build
 fi
